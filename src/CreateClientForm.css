@@ -1,0 +1,166 @@
+/* General container styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Form heading */
+  .form-container h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form styling */
+  .client-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* For mobile view */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #666;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #6c63ff;
+  }
+  
+  /* Row for GST No. and Address */
+  .form-row {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .half-width {
+    flex: 1;
+  }
+  
+  /* File upload styling */
+  .file-upload-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .file-input {
+    display: none;
+  }
+  
+  .upload-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .upload-button:hover {
+    background-color: #5a52cc;
+  }
+  
+  /* Form actions (buttons) */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .cancel-button,
+  .save-button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cancel-button {
+    background-color: #d3d3d3;
+    color: #333;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c0c0c0;
+  }
+  
+  .save-button {
+    background-color: #6c63ff;
+    color: #fff;
+  }
+  
+  .save-button:hover {
+    background-color: #5a52cc;
+  }
+  
+  /* Responsive design for larger screens */
+  @media (min-width: 768px) {
+    .client-form {
+      max-width: 600px; /* Wider form for tablets and desktops */
+    }
+  
+    .form-container h2 {
+      font-size: 28px;
+    }
+  
+    .form-group label {
+      font-size: 16px;
+    }
+  
+    .form-input {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    .upload-button,
+    .cancel-button,
+    .save-button {
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .client-form {
+      max-width: 700px;
+    }
+  
+    .form-row {
+      gap: 20px;
+    }
+  }

@@ -1,0 +1,247 @@
+/* src/styles/ClientDetails.css */
+.client-details {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.subscription-section {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.subscription-section h3 {
+  margin-top: 0;
+}
+
+.subscription-section p {
+  margin: 5px 0;
+}
+
+.renew-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-folder-section {
+  margin-bottom: 20px;
+}
+
+.create-folder-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-folder-form,
+.edit-folder-form {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-group input,
+.create-folder-form input,
+.edit-folder-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.submit-button,
+.save-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.duplicate-alert {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #dc3545;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+.folder-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.folder {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.folder-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit-button {
+  color: #007bff;
+}
+
+.delete-button {
+  color: #dc3545;
+}
+
+.upload-button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .search-bar {
+    width: 100%;
+  }
+
+  .subscription-section {
+    padding: 10px;
+  }
+
+  .renew-button {
+    width: 100%;
+  }
+
+  .create-folder-button {
+    width: 100%;
+  }
+
+  .create-folder-form,
+  .edit-folder-form {
+    padding: 10px;
+  }
+
+  .form-group input,
+  .create-folder-form input,
+  .edit-folder-form input {
+    font-size: 14px;
+  }
+
+  .submit-button,
+  .save-button,
+  .cancel-button {
+    width: 100%;
+  }
+
+  .duplicate-alert {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    font-size: 14px;
+  }
+
+  .folder-list {
+    grid-template-columns: 1fr;
+  }
+
+  .folder-actions {
+    gap: 5px;
+  }
+
+  .edit-button,
+  .delete-button {
+    font-size: 14px;
+  }
+}
